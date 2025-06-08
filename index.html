@@ -1,0 +1,53 @@
+<!-- src/app/app.component.html -->
+<header>
+  <div class="container">
+    <h1 class="logo">Stride</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Step into Style</h2>
+    <p>Discover our latest collection of premium sneakers and formal shoes.</p>
+    <a href="#collection" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<section id="collection" class="products">
+  <div class="container">
+    <h3>Featured Collection</h3>
+    <div class="product-grid">
+      <div class="product" *ngFor="let shoe of shoes">
+        <img [src]="shoe.image" [alt]="shoe.name" />
+        <h4>{{ shoe.name }}</h4>
+        <p>₹{{ shoe.price }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <h3>About Stride</h3>
+    <p>
+      At Stride, we believe shoes are not just for walking — they’re a style
+      statement. Our mission is to craft footwear that blends comfort,
+      durability, and design.
+    </p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <p>📧 contact@stride.com | 📞 +91 98765 43210</p>
+    <p>&copy; 2025 Stride. All rights reserved.</p>
+  </div>
+</footer>
